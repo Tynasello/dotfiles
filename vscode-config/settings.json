@@ -1,0 +1,117 @@
+// ,--.   ,--.,---.   ,-----. ,-----. ,------.  ,------.     ,-----. ,-----. ,--.  ,--.,------.,--. ,----.
+// \  `.'  /'   .-' '  .--./'  .-.  '|  .-.  \ |  .---'    '  .--./'  .-.  '|  ,'.|  ||  .---'|  |'  .-./
+//  \     / `.  `-. |  |    |  | |  ||  |  \  :|  `--,     |  |    |  | |  ||  |' '  ||  `--, |  ||  | .---.
+//   \   /  .-'    |'  '--'\'  '-'  '|  '--'  /|  `---.    '  '--'\'  '-'  '|  | `   ||  |`   |  |'  '--'  |
+//    `-'   `-----'  `-----' `-----' `-------' `------'     `-----' `-----' `--'  `--'`--'    `--' `------'
+
+{
+  "workbench.colorTheme": "Mariana Pro (Cool)",
+  "workbench.iconTheme": "quill-icons",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "workbench.editor.enablePreview": false,
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
+  // "workbench.settings.openDefaultSettings": true,
+  // "workbench.statusBar.visible": false,
+
+  // ----
+  // Code Formatting
+  // ----
+
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IncludeBlocks: Merge, IndentGotoLabels: true, KeepEmptyLinesAtTheStartOfBlocks: true}",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[java]": {
+    "editor.formatOnSave": true
+  },
+  "[kotlin]": {
+    "editor.formatOnSave": true
+  },
+  "[r]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "REditorSupport.r"
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    // "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ----
+  // TS/JS
+  // ----
+
+  // module imports use relative paths
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  // update imports when moving files
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // ----
+  // Java
+  // ----
+  "java.inlayHints.parameterNames.enabled": "none",
+
+  // ----
+  // Misc.
+  // ----
+
+  "editor.accessibilitySupport": "off",
+  "code-runner.runInTerminal": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+
+  // ----
+  // Integrated Terminal
+  // ----
+
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.cursorStyle": "underline",
+  // for conda
+  "terminal.integrated.inheritEnv": false
+}
