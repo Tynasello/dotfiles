@@ -1,0 +1,112 @@
+{
+  /*---------------------
+  -- General Configs 
+  ---------------------*/
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  // "workbench.editor.enablePreview": false,
+
+  /*---------------------
+  -- Cosmetics 
+  ---------------------*/
+
+  "workbench.colorTheme": "Visual Studio Dark - C++",
+  "workbench.iconTheme": "quill-icons",
+  "editor.fontFamily": "JetBrains Mono",
+  "window.zoomLevel": -0.5,
+  "editor.fontSize": 13.5,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 13.5,
+  "editor.lineNumbers": "relative",
+  // making minimal
+  "breadcrumbs.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.indentation": false, // indentation guides in code
+  "editor.hover.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true, // using copilot instead
+  // color customizations to window
+  "workbench.colorCustomizations": {
+    "editorLineNumber.foreground": "#3f4344",
+    "editorLineNumber.activeForeground": "#508997",
+    "statusBar.background": "#073c2c",
+    "activityBar.background": "#ffffff00",
+    "titleBar.activeBackground": "#ffffff00",
+    "tab.inactiveBackground": "#ffffff00",
+    "editorGroupHeader.tabsBorder": "#ffffff00",
+    "scrollbar.shadow": "#ffffff00",
+    "tab.activeBackground": "#ffffff00",
+    "tab.activeBorderTop": "#817e7e",
+    "editor.background": "#1f1f20"
+  },
+
+  /*---------------------
+  -- File Specific Configs 
+  ---------------------*/
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  /*---------------------
+  -- VSCode Vim Config
+  ---------------------*/
+
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  // insert mode
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+  // normal mode
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "w"], // save
+      "commands": [":w"]
+    },
+    {
+      "before": ["<leader>", "q"], // quit
+      "commands": [":q"]
+    },
+    {
+      "before": ["'"], // yank to black whole register
+      "after": ["\"", "_"]
+    },
+    {
+      "before": ["<leader>", "o"], // open line below in normal mode
+      "after": ["o", "<esc>"]
+    },
+    {
+      "before": ["<leader>", "O"], // open line above in normal mode
+      "after": ["O", "<esc>"]
+    },
+    {
+      "before": ["g", "r", "i", "w"], // replace word under cursor
+      "after": ["\"", "_", "c", "i", "w", "<esc>", "p"]
+    }
+  ],
+  // visual mode
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["'"], // yank to black whole register
+      "after": ["\"", "_"]
+    }
+  ]
+}

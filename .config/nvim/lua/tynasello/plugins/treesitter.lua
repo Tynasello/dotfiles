@@ -7,10 +7,10 @@ end
 -- configure treesitter
 treesitter.setup({
 	-- enable syntax highlighting
-	-- highlight = {
-	-- 	enable = true,
-	-- },
-	-- enable indentation (bases on = operator)
+	highlight = {
+		enable = true,
+	},
+	-- enable indentation (based on = operator)
 	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },

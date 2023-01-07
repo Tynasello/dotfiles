@@ -1,0 +1,18 @@
+[
+  {
+    "key": "ctrl+c", // collapse folder tree
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "ctrl+s", // rename symbol and references
+    "command": "editor.action.rename"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "explorer.newFolder"
+  }
+]

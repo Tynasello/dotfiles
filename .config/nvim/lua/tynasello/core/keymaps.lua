@@ -7,14 +7,28 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
+-- exit insert mode
 keymap.set("i", "jk", "<ESC>")
+
+-- redo
+keymap.set("n", "<S-u>", "<C-r>")
+
+-- save/exit file
+keymap.set("n", "<leader>w", ":w<CR>")
+keymap.set("n", "<leader>q", ":q<CR>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
--- delete single character without copying into register
-keymap.set("n", "x", '"_x')
+-- jump forward and back
+keymap.set("n", "<leader>0", "<C-i>")
+keymap.set("n", "<leader>9", "<C-o>")
+
+-- deletes/cut/pastes
+keymap.set("n", "<leader>cl", "0D") -- delete line without line break
+keymap.set("n", "<leader>O", "O<ESC>") -- stay in normal mode on new line
+keymap.set("n", "<leader>o", "o<ESC>") -- stay in normal mode on new line
+keymap.set({ "n", "v" }, "'", '"_') -- use 'd to delete and add to black hole register
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
@@ -34,13 +48,6 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "n", "nzzzv") -- searching next centers cursor
 keymap.set("n", "N", "Nzzzv") -- searching prev centers cursor
 
-keymap.set("n", "<leader>o", "o<ESC>") -- stay in normal mode on new line
-keymap.set("n", "<leader>O", "O<ESC>") -- stay in normal mode on new line
-
-keymap.set("x", "<leader>p", '"_dp') -- delete register when pasting (replacing)
-
-keymap.set("n", "<leader>dd", "0D") -- delete line without line break
-
 ----------------------
 -- Plugin Keybinds
 ----------------------
@@ -52,7 +59,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>") -- find files in curr dir
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
@@ -66,3 +73,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- toggle tag bar
+keymap.set("n", "<leader>tb", ":TagbarToggle")

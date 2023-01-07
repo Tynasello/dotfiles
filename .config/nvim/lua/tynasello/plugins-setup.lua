@@ -34,15 +34,23 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- colorschemes
-	use("EdenEast/nightfox.nvim")
-	use("kvrohit/mellow.nvim")
+	use("morhetz/gruvbox")
+	use("aktersnurra/no-clown-fiesta.nvim")
 	use("bluz71/vim-nightfly-guicolors")
+	use("eddyekofo94/gruvbox-flat.nvim")
 
 	-- essential plugins
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
-
+	use("majutsushi/tagbar") -- preservevim tagbar for tag browsing
+	use({ "mg979/vim-visual-multi", branch = "master" }) -- multiple cursors
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	}) -- makdown preview
 	-- window manager
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
